@@ -291,7 +291,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
           <GoogleLogin setUser={setUser} saveUserToDB= {saveUserToDB} />
         </div>
       ) : (
-    <div className="sm:max-h-screen lg:h-screen min-w-screen bg-transparent text-gray-300 font-nothing flex flex-col items-center justify-between lg:justify-around ">
+    <div className="h-screen min-w-screen bg-transparent text-gray-300 font-nothing flex flex-col items-center justify-between lg:justify-around ">
           <Sidebar
             isOpen={sidebarOpen}
             onClose={() => setSidebarOpen(false)}
