@@ -291,7 +291,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
           <GoogleLogin setUser={setUser} saveUserToDB= {saveUserToDB} />
         </div>
       ) : (
-    <div className="h-screen min-w-screen bg-transparent text-gray-300 font-nothing flex flex-col items-center justify-start m-10 lg:justify-around lg:m-0 ">
+    <div className="h-screen min-w-screen bg-transparent text-gray-300 font-nothing flex flex-col items-center justify-start  lg:justify-around ">
           <Sidebar
             isOpen={sidebarOpen}
             onClose={() => setSidebarOpen(false)}
@@ -343,7 +343,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
       )}
 
       {!showPopup && (
-        <div className="text-center  flex flex-col items-center">
+        <div className="text-center m-15 lg:m-0 flex flex-col items-center">
           <div className="sm:text-5xl h-20 text-gray-300 uppercase tracking-wider mb-5 font-nothing lg:text-6xl">{(AnimationNum < 4) &&<TypeAnimation 
             sequence={[1000,"You are",500,()=>SetAnimationNum(2)] 
             }
