@@ -57,7 +57,7 @@ function Digit({ place, value, height, digitStyle }) {
 
 export default function Counter({
   value,
-  fontSize = 100,
+  fontSize,
   padding = 0,
   places = [10, 1, 0.1, 0.01],
   gap = 8,
