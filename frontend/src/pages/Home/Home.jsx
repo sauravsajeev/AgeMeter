@@ -429,27 +429,27 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
                     [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert 
                     [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-100"
               />):(<DropDown onSelect={handleInputChangeGoalE} className="mx-auto ml-2" />)}
-                 <label >Do you want us to remind you of the goal? <label>everyday
+                 <label >Do you want us to remind you of the goal? <br></br> <label className="m-2">
                   <input
                   type="checkbox"
                   className="h-4 w-4 rounded border border-border accent-blue-600 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   checked={reminder.day}
                   onChange={(e) => setReminder({day:e.target.checked,week:false,month:false})}
-                /></label>
-                <label>Weekly
+                />Daily</label>
+                <label className="m-2">
                   <input
                   type="checkbox"
                   className="h-4 w-4 rounded border border-border accent-blue-600 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   checked={reminder.week}
                   onChange={(e) => setReminder({day:false,week:e.target.checked,month:false})}
-                /></label>
-                <label>Monthly
+                />Weekly</label>
+                <label className="m-2">
                   <input
                   type="checkbox"
                   className="h-4 w-4 rounded border border-border accent-blue-600 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   checked={reminder.month}
                   onChange={(e) => setReminder({day:false,week:false,month:e.target.checked})}
-                /></label></label>
+                />Monthly</label></label>
               <button
                 onClick={saveGoal}
                 disabled={!showGoalPopup}
