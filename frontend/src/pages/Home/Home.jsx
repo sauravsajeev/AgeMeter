@@ -256,7 +256,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
     if (dobInput && user) {
       const inputDate = new Date(dobInput)
       const now = new Date()
-      const age = (now.getTime() - birthDate.getTime()) / (1000*60*60*24*365.25);
+      const age = (now.getTime() - inputDate.getTime()) / (1000*60*60*24*365.25);
       if (!isNaN(inputDate.getTime()) && inputDate <= now && age < 100) {
         try {
           const {goals, ...rest} = await updateUserDOB(user.google_id, dobInput)
