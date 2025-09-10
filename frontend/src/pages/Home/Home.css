@@ -1,0 +1,16 @@
+.saudu{
+    font-size:110px;
+     font-family: "Nothing","sans-serif";
+     color:rgb(255, 255, 255);
+     margin-bottom: 10px;
+     min-height: 10rem;
+     background-color: transparent;
+}
+@media only screen and (max-width: 480px) {
+  .saudu{
+    font-size: 50px;
+    min-height: 5rem;
+    margin-bottom: 2px ;
+    width:100vw;
+  }
+}

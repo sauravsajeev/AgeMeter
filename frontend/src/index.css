@@ -1,0 +1,12 @@
+
+@import "tailwindcss";
+@theme{
+  --font-nothing: 'Nothing', sans-serif;
+}
+@font-face {
+  font-family: "Nothing";
+  src: url("/fonts/nothing.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
