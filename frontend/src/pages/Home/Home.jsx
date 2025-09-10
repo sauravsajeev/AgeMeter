@@ -3,7 +3,7 @@
 import { useState, useEffect ,useCallback, use} from "react"
 import { TypeAnimation } from "react-type-animation" 
 import CountUp from "react-countup"
-import FadeIn from 'react-fade-in';
+import { motion } from "framer-motion";
 import "./Home.css"
 import GoogleLogin from "../../components/GoogleLogin/GoogleLogin"
 import DropDown from "../../components/DropDown/DropDown"
@@ -374,13 +374,15 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
             }
             repeat ={0}
             cursor={false}/>}</div>
-              <div className="w-[20rem] text-lg text-gray-300 uppercase tracking-wider font-nothing min-h-[5rem]"> {(AnimationNum < 1) && <FadeIn><button
-                onClick={() =>{ AddGoal()}}
-                className="w-full py-3 bg-white text-black font-medium font-nothing hover:bg-gray-200 disabled:bg-gray-600 disabled:text-gray-400"
-              >
-                <b >+</b> Add Goals
-              </button>
-              </FadeIn>
+              <div className="w-[20rem] text-lg text-gray-300 uppercase tracking-wider font-nothing min-h-[5rem]"> {(AnimationNum < 1) && <motion.button
+  onClick={() => { AddGoal() }}
+  className="w-full py-3 bg-white text-black font-medium font-nothing hover:bg-gray-200 disabled:bg-gray-600 disabled:text-gray-400"
+  initial={{ opacity: 0, y: 20 }}   // start hidden + slightly down
+  animate={{ opacity: 1, y: 0 }}    // fade in + slide up
+  transition={{ duration: 0.5 }}    // animation speed
+>
+  <b>+</b> Add Goals
+</motion.button>
               }</div> 
         </div>
         
