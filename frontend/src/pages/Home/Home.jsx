@@ -291,7 +291,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
           <GoogleLogin setUser={setUser} saveUserToDB= {saveUserToDB} />
         </div>
       ) : (
-    <div className="h-screen min-w-screen bg-transparent text-gray-300 font-nothing flex flex-col items-center justify-around ">
+    <div className="sm:max-h-screen lg:h-screen min-w-screen bg-transparent text-gray-300 font-nothing flex flex-col items-center justify-around ">
           <Sidebar
             isOpen={sidebarOpen}
             onClose={() => setSidebarOpen(false)}
@@ -364,7 +364,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
         />
       ) : (<Counter
   value={formatAge(liveAge)}
-  fontSize={(window.innerWidth < 768) ? 50 : 110}
+  fontSize={(window.innerWidth < 768) ? 35 : 110}
   places={[10, 1, 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001, 0.0000001, 0.00000001]}
   textColor="white"
   />
