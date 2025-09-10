@@ -343,8 +343,8 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
       )}
 
       {!showPopup && (
-        <div className="text-center m-15 lg:m-0 flex flex-col items-center">
-          <div className="sm:text-5xl h-20 text-gray-300 uppercase tracking-wider mb-5 font-nothing lg:text-6xl">{(AnimationNum < 4) &&<TypeAnimation 
+        <div className="text-center m-18 lg:m-0 flex flex-col items-center">
+          <div className="sm:text-5xl h-20 text-gray-300 uppercase tracking-wider mb-2 font-nothing lg:text-6xl lg:mb-5">{(AnimationNum < 4) &&<TypeAnimation 
             sequence={[1000,"You are",500,()=>SetAnimationNum(2)] 
             }
             repeat ={0}
