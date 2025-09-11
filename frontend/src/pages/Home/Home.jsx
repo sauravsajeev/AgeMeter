@@ -109,11 +109,24 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
     }
   }
   useEffect(()=> {
+    const loadGoal = async () =>{
      const tempgoals = JSON.parse(localStorage.getItem("goals"));
-     if (tempgoals){
-      setGoal(tempgoals)
+     const storedUser = localStorage.getItem("user")
+     const dbUser = await fetchUserFromDB((JSON.parse(storedUser)).google_id)
+     if (dbUser){
+          if (dbUser.goals.length > 0 ){
+            if (tempgoals != dbUser.goals){
+                 setGoal(dbUser.goals)
+                 localStorage.setItem("goals",JSON.stringify(dbUser.goals))
+            }
+            else{
+              setGoal(tempgoals)
+            } 
+          }
      }
-  }, [setGoal])
+    }
+    loadGoal()
+  }, [setGoal,fetchUserFromDB])
   useEffect(() => {
     const loadUser = async () => {
       const storedUser = localStorage.getItem("user")
@@ -244,8 +257,8 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:9000"
     localStorage.setItem("goals",JSON.stringify(dbback.goals))
     console.log(goals,dbback)
     setShowGoalPopup(!showGoalPopup)
-     setShowAlert(true)
-      setAlertData({ type: "success", message: "Added your new goal! Start your work" })
+    setShowAlert(true)
+    setAlertData({ type: "success", message: "Added your new goal! Start your work" })
   }
   const deleteSavedGoal = (title) => {
    const tempgoals = goals.filter((goal) => goal.title !== title)
