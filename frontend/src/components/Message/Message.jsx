@@ -21,7 +21,7 @@ export function Alert({ type = "info", message, className = "", autoClose = true
   return (
     <div className={`flex items-center h-10 p-2 border rounded-lg ${getAlertStyles(type)} ${className}`}>
       <span className="text-lg">{getIcon(type)}</span>
-      <p className="text-sm font-medium">{message}</p>
+      <p className="text-sm font-medium hidden lg:block">{message}</p>
     </div>
   )
 }
