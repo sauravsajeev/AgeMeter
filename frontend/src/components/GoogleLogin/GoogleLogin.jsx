@@ -66,7 +66,7 @@ function GoogleLogin({ setUser, saveUserToDB }) {
           <div className="p-4 rounded-lg max-w-md text-center text-gray-300 text-sm leading-relaxed">
             <h3 className="text-white font-semibold mb-2">About Us</h3>
             <p>
-              At Handwritten, we make it easy to turn handwritten notes into clean, digital documents. Our AI-powered tool quickly recognizes handwriting and converts it into editable, searchable text, helping students, professionals, and creators save time, stay organized, and carry their ideas anywhere with ease.<br /><br />Developed by <i style={{color:"red",fontStyle:"normal"}}>Saudu</i>
+              At Agemeter, we make it simple to track your life’s journey in real time. Our interactive tool visualizes your age as dynamic points and milestones, letting you set goals for the years ahead. Whether it’s personal growth, career achievements, or life aspirations, Agemeter helps you stay motivated, organized, and intentional about your future.<br /><br />Developed by <i style={{color:"red",fontStyle:"normal"}}>Saudu</i>
             </p>
           </div>
         </div>
